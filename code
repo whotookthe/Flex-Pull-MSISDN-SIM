@@ -20,7 +20,7 @@
         if (text.includes('Line Number')) {
             let lineNumber = findNextTextContent(element);
             if (lineNumber) {
-                extractedData.push(`Line Number: ${lineNumber}`);
+                extractedData.push(lineNumber);  // Only store the number, not the label
                 console.log(`Found Line Number: ${lineNumber}`);
             }
         }
@@ -29,7 +29,7 @@
         if (text.includes('SIM Serial Number')) {
             let simSerial = findNextTextContent(element);
             if (simSerial) {
-                extractedData.push(`SIM Serial Number: ${simSerial}`);
+                extractedData.push(simSerial);  // Only store the number, not the label
                 console.log(`Found SIM Serial Number: ${simSerial}`);
             }
         }
